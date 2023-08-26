@@ -32,8 +32,15 @@ const thoughtSchema = new Schema({
   },
   reactions: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'Reaction',
+      reactionBody: {
+        type: String,
+        required: true,
+        maxlength: 280,
+      },
+      username: {
+        type: String,
+        required: true,
+      },
     },
   ],
 });

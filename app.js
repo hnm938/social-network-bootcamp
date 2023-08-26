@@ -12,8 +12,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/myapp", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
 });
 
 const db = mongoose.connection;

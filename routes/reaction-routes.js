@@ -6,6 +6,6 @@ const {
 
 // Define routes
 router.route("/").post(createReaction);
-router.route("/:reactionId").delete(deleteReaction);
+router.route("/:thoughtId/:reactionId").delete(deleteReaction);
 
 module.exports = router;
